@@ -1,0 +1,40 @@
+String cekNilai(int nilai) {
+  if (nilai > 70) {
+    return "Nilai A";
+  } else if (nilai > 40) {
+    return "Nilai B";
+  } else if (nilai > 0) {
+    return "Nilai C";
+  } else {
+    return "";
+  }
+}
+
+void main() async{
+  int nilai = 60;
+  String hasil = cekNilai(nilai);
+  print(hasil);
+
+  for(var i =0; i<=10; i++){
+    print(i);
+    Future<List<int>> multiplyList(List<int> data, int multiplier) async {
+  List<int> resultList = [];
+  for (int i = 0; i < data.length; i++) {
+    int result = data[i] * multiplier;
+    resultList.add(result);
+    await Future.delayed(Duration(milliseconds: 100)); // Menambahkan delay 100ms (hanya untuk simulasi)
+  }
+  return resultList;
+}
+  List<int> data = [1, 2, 3, 4, 5];
+  int pengali = 2;
+
+  List<int> hasil = await multiplyList(data, pengali);
+  print(hasil);
+}
+
+  }
+    
+
+   
+  
